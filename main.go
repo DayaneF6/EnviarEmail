@@ -73,7 +73,7 @@ func sendMessageToSNS(email, message string) error {
 	params := &sns.PublishInput{
 		Message:  aws.String(fmt.Sprintf("Mensagem de: %s\n\n%s", email, message)),
 		Subject:  aws.String("Nova mensagem recebida"),
-		TopicArn: aws.String("arn:aws:sns:us-east-2:123456789012:SeuTopicoSNS"), // Substitua pelo ARN do seu tópico SNS
+		TopicArn: aws.String("arn:aws:sns:us-east-2:124355683655:EnviarMensagem"),
 	}
 
 	// Publica no SNS
