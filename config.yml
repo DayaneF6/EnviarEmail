@@ -1,0 +1,19 @@
+aws:
+  region: "us-east-2" # Região AWS onde seus recursos estão
+ # access_key_id: ""  # Acesso à sua chave de acesso AWS (use variáveis de ambiente ou IAM Roles para maior segurança)
+ # secret_access_key: ""  # Chave secreta AWS (use variáveis de ambiente ou IAM Roles para maior segurança)
+
+sns:
+  topic_arn: "arn:aws:sns:us-east-2:124355683655:EnviarMensagem"  # ARN do seu tópico SNS
+  message_subject: "Nova Mensagem"
+  
+
+lambda:
+  function_name: "MensagemEmailApi"  # Nome da função Lambda a ser invocada pelo API Gateway
+  # timeout: 10  # Tempo limite para a execução da função Lambda, em segundos
+  # memory_size: 128  # Tamanho da memória alocada para a função Lambda, em MB
+
+api_gateway:
+  url: "https://mkrdnm08fb.execute-api.us-east-2.amazonaws.com"  # URL do seu endpoint do API Gateway
+  # stage: "prod"  # Stage do API Gateway (ex: dev, prod)
+  
